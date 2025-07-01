@@ -2,7 +2,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Home, Building, Briefcase, Ban, GraduationCap, MapPin, Users, Monitor } from 'lucide-react';
+import { Home, Building, Briefcase, Landmark, GraduationCap, MapPin, Users, Monitor } from 'lucide-react';
 
 const JobTypeCategories = () => {
   const jobTypes = [
@@ -29,7 +29,7 @@ const JobTypeCategories = () => {
     },
     {
       name: 'Bank Jobs',
-      icon: <Ban className="h-12 w-12" />,
+      icon: <Landmark className="h-12 w-12" />,
       count: '3,456',
       color: 'bg-gradient-to-br from-orange-500 to-orange-600',
       hoverColor: 'hover:from-orange-600 hover:to-orange-700'

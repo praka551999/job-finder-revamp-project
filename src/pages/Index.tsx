@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Search, MapPin, Building, Users, TrendingUp, Clock, Star } from 'lucide-react';
+import { Search, MapPin, Building, Users, TrendingUp, Clock, Star, MessageCircle, Phone, Instagram, Facebook, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,47 +10,36 @@ import JobCard from '@/components/JobCard';
 import CategoryCard from '@/components/CategoryCard';
 import DistrictButtons from '@/components/DistrictButtons';
 import JobTypeCategories from '@/components/JobTypeCategories';
+import SuccessStories from '@/components/SuccessStories';
 
 const Index = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [location, setLocation] = useState('');
 
-  const featuredJobs = [
+  const featuredArticles = [
     {
       id: 1,
-      title: 'Senior Software Engineer',
-      company: 'TechCorp India',
-      location: 'Chennai',
-      salary: '₹15-25 LPA',
-      type: 'Full-time',
-      posted: '2 days ago',
-      logo: '/placeholder.svg',
-      skills: ['React', 'Node.js', 'Python'],
-      featured: true
+      title: 'Latest Government Job Notifications - December 2024',
+      excerpt: 'Stay updated with the newest government job openings across Tamil Nadu...',
+      date: '2 days ago',
+      category: 'Government Jobs',
+      readTime: '5 min read'
     },
     {
       id: 2,
-      title: 'Digital Marketing Manager',
-      company: 'GrowthLabs',
-      location: 'Coimbatore',
-      salary: '₹8-15 LPA',
-      type: 'Full-time',
-      posted: '1 day ago',
-      logo: '/placeholder.svg',
-      skills: ['SEO', 'SEM', 'Analytics'],
-      featured: true
+      title: 'Banking Sector Recruitment Drive - Apply Now',
+      excerpt: 'Major banks are hiring for various positions including clerk, PO, and specialist officers...',
+      date: '1 day ago',
+      category: 'Bank Jobs',
+      readTime: '4 min read'
     },
     {
       id: 3,
-      title: 'Data Scientist',
-      company: 'DataMinds',
-      location: 'Madurai',
-      salary: '₹12-20 LPA',
-      type: 'Full-time',
-      posted: '3 days ago',
-      logo: '/placeholder.svg',
-      skills: ['Python', 'ML', 'SQL'],
-      featured: true
+      title: 'Work From Home Opportunities in IT Sector',
+      excerpt: 'Explore remote job opportunities in software development, digital marketing...',
+      date: '3 days ago',
+      category: 'Remote Jobs',
+      readTime: '6 min read'
     }
   ];
 
@@ -67,12 +56,31 @@ const Index = () => {
               </h1>
             </div>
             <nav className="hidden md:flex items-center space-x-6">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Find Jobs</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Companies</a>
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors">Career Tips</a>
-              <Button variant="outline" className="ml-4">Sign In</Button>
-              <Button className="bg-gradient-to-r from-blue-600 to-purple-600">Post a Job</Button>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Work From Home</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">State Government</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Central Government</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Bank Jobs</a>
+              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact Us</a>
             </nav>
+            {/* Social Media Links */}
+            <div className="flex items-center space-x-3">
+              <a href="#" className="text-gray-600 hover:text-blue-500 transition-colors">
+                <MessageCircle className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-green-500 transition-colors">
+                <Phone className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-pink-500 transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-600 hover:text-red-500 transition-colors">
+                <Youtube className="h-5 w-5" />
+              </a>
+            </div>
           </div>
         </div>
       </header>
@@ -148,59 +156,62 @@ const Index = () => {
       {/* Ad Placement 2 */}
       <AdPlaceholder type="square" className="my-8" />
 
-      {/* Featured Jobs */}
+      {/* Success Stories Slideshow */}
+      <SuccessStories />
+
+      {/* Ad Placement 3 */}
+      <AdPlaceholder type="banner" className="my-8" />
+
+      {/* Latest Articles Section */}
       <section className="py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h3 className="text-4xl font-bold mb-4">Featured Jobs in Tamil Nadu</h3>
-            <p className="text-xl text-gray-600">Hand-picked opportunities from top employers</p>
+            <h3 className="text-4xl font-bold mb-4">Latest Job Updates & Articles</h3>
+            <p className="text-xl text-gray-600">Stay informed with the newest job opportunities and career insights</p>
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {featuredJobs.map((job) => (
-              <JobCard key={job.id} job={job} />
+            {featuredArticles.map((article) => (
+              <Card key={article.id} className="hover:shadow-xl transition-all duration-300 cursor-pointer group">
+                <CardContent className="p-6">
+                  <Badge className="mb-3 bg-blue-100 text-blue-600">{article.category}</Badge>
+                  <h4 className="font-bold text-lg mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                    {article.title}
+                  </h4>
+                  <p className="text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
+                  <div className="flex items-center justify-between text-sm text-gray-500">
+                    <span className="flex items-center">
+                      <Clock className="h-4 w-4 mr-1" />
+                      {article.readTime}
+                    </span>
+                    <span>{article.date}</span>
+                  </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
           
           <div className="text-center">
             <Button size="lg" variant="outline" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white">
-              View All Jobs
+              View All Articles
             </Button>
           </div>
         </div>
       </section>
 
-      {/* Ad Placement 3 */}
+      {/* Ad Placement 4 */}
       <AdPlaceholder type="banner" className="my-8" />
 
       {/* Tamil Nadu Districts */}
       <DistrictButtons />
 
-      {/* Ad Placement 4 */}
+      {/* Ad Placement 5 */}
       <div className="flex justify-center space-x-6 my-8">
         <AdPlaceholder type="square" />
         <AdPlaceholder type="square" />
       </div>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-        <div className="container mx-auto text-center">
-          <h3 className="text-4xl font-bold mb-6">Ready to Take the Next Step?</h3>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join millions of job seekers who trust TrendingJobsIndia to find their perfect career match in Tamil Nadu.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-blue-600">
-              Create Your Profile
-            </Button>
-            <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
-              Upload Resume
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Ad Placement 5 */}
+      {/* Ad Placement 6 */}
       <AdPlaceholder type="banner" className="my-8" />
 
       {/* Footer */}
@@ -212,35 +223,52 @@ const Index = () => {
                 <TrendingUp className="h-6 w-6" />
                 <span className="text-xl font-bold">TrendingJobsIndia</span>
               </div>
-              <p className="text-gray-400">
+              <p className="text-gray-400 mb-4">
                 Tamil Nadu's fastest growing job portal connecting talent with opportunity.
               </p>
+              {/* Social Media in Footer */}
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  <MessageCircle className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors">
+                  <Phone className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-blue-400 transition-colors">
+                  <Facebook className="h-5 w-5" />
+                </a>
+                <a href="#" className="text-gray-400 hover:text-red-400 transition-colors">
+                  <Youtube className="h-5 w-5" />
+                </a>
+              </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">For Job Seekers</h4>
+              <h4 className="font-semibold mb-4">Job Categories</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Browse Jobs</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Government Jobs</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Bank Jobs</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Work From Home</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Private Jobs</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-gray-400">
+                <li><a href="#" className="hover:text-white transition-colors">Latest Jobs</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Job Alerts</a></li>
                 <li><a href="#" className="hover:text-white transition-colors">Career Tips</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Resume Builder</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Salary Guide</a></li>
+                <li><a href="#" className="hover:text-white transition-colors">Success Stories</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">For Employers</h4>
+              <h4 className="font-semibold mb-4">Contact Info</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Post Jobs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Search Resumes</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Recruitment Solutions</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
+                <li>Email: info@trendingjobsindia.com</li>
+                <li>Phone: +91 9876543210</li>
+                <li>Address: Chennai, Tamil Nadu</li>
               </ul>
             </div>
           </div>

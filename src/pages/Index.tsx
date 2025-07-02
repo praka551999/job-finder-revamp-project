@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Search, MapPin, Building, Users, TrendingUp, Clock, Star, MessageCircle, Phone, Instagram, Facebook, Youtube } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -58,7 +57,7 @@ const Index = () => {
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
-              <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+              <a href="https://trendingjobsindia.com" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
               <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Work From Home</a>
               <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">State Government</a>
               <a href="#" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Central Government</a>
@@ -98,7 +97,7 @@ const Index = () => {
           {/* Mobile Navigation Menu */}
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-wrap gap-2">
-              <a href="#" className="text-sm px-3 py-2 bg-blue-50 text-blue-600 rounded-lg font-medium">Home</a>
+              <a href="https://trendingjobsindia.com" className="text-sm px-3 py-2 bg-blue-50 text-blue-600 rounded-lg font-medium">Home</a>
               <a href="#" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Work From Home</a>
               <a href="#" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">State Govt</a>
               <a href="#" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Central Govt</a>

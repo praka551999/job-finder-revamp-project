@@ -18,7 +18,7 @@ const Index = () => {
 
   const handleSearch = () => {
     // Redirect to main website with search parameters
-    const baseUrl = 'https://trendingjobsindia.com';
+    const baseUrl = 'https://trendingjobsindia.com/';
     const searchParams = new URLSearchParams();
     if (searchQuery) searchParams.append('q', searchQuery);
     if (location) searchParams.append('location', location);
@@ -73,7 +73,7 @@ const Index = () => {
             
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
-              <a href="https://trendingjobsindia.com" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
+              <a href="https://trendingjobsindia.com/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
               <a href="https://trendingjobsindia.com/work-from-home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Work From Home</a>
               <a href="https://trendingjobsindia.com/state-government" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">State Government</a>
               <a href="https://trendingjobsindia.com/central-government" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Central Government</a>
@@ -113,7 +113,7 @@ const Index = () => {
           {/* Mobile Navigation Menu */}
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-wrap gap-2">
-              <a href="https://trendingjobsindia.com" className="text-sm px-3 py-2 bg-blue-50 text-blue-600 rounded-lg font-medium">Home</a>
+              <a href="https://trendingjobsindia.com/" className="text-sm px-3 py-2 bg-blue-50 text-blue-600 rounded-lg font-medium">Home</a>
               <a href="https://trendingjobsindia.com/work-from-home" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Work From Home</a>
               <a href="https://trendingjobsindia.com/state-government" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">State Govt</a>
               <a href="https://trendingjobsindia.com/central-government" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Central Govt</a>
@@ -274,7 +274,7 @@ const Index = () => {
           <p className="text-lg md:text-xl mb-6">Join thousands of job seekers who found success with TrendingJobsIndia</p>
           <Button 
             size="lg" 
-            onClick={() => window.open('https://trendingjobsindia.com', '_blank')}
+            onClick={() => window.open('https://trendingjobsindia.com/', '_blank')}
             className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg font-semibold"
           >
             Visit TrendingJobsIndia.com Now
@@ -345,7 +345,7 @@ const Index = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
-            <p>&copy; 2024 TrendingJobsIndia.com. All rights reserved. | <a href="https://trendingjobsindia.com" className="hover:text-white transition-colors">Visit Main Website</a></p>
+            <p>&copy; 2024 TrendingJobsIndia.com. All rights reserved. | <a href="https://trendingjobsindia.com/" className="hover:text-white transition-colors">Visit Main Website</a></p>
           </div>
         </div>
       </footer>

@@ -26,35 +26,38 @@ const Index = () => {
     window.open(searchUrl, '_blank');
   };
 
-  const handleArticleClick = (articleId: number) => {
-    // Redirect to specific article on main website
-    window.open(`https://trendingjobsindia.com/articles/${articleId}`, '_blank');
+  const handleArticleClick = (url: string) => {
+    // Redirect to specific job link
+    window.open(url, '_blank');
   };
 
-  const featuredArticles = [
+  const featuredJobs = [
     {
       id: 1,
-      title: 'Latest Government Job Notifications - December 2024',
-      excerpt: 'Stay updated with the newest government job openings across Tamil Nadu...',
+      title: 'Amazon Freshers Jobs Pan India Hiring 2025',
+      excerpt: 'Amazon is hiring freshers across India for various positions in 2025...',
       date: '2 days ago',
-      category: 'Government Jobs',
-      readTime: '5 min read'
+      category: 'Private Jobs',
+      readTime: '5 min read',
+      url: 'https://trendingjobsindia.com/amazon-freshers-jobs-pan-india-hiring-2025/'
     },
     {
       id: 2,
-      title: 'Banking Sector Recruitment Drive - Apply Now',
-      excerpt: 'Major banks are hiring for various positions including clerk, PO, and specialist officers...',
+      title: 'ICICI Bank Internship Program for Freshers in 2025',
+      excerpt: 'ICICI Bank is offering internship opportunities for freshers in 2025...',
       date: '1 day ago',
       category: 'Bank Jobs',
-      readTime: '4 min read'
+      readTime: '4 min read',
+      url: 'https://trendingjobsindia.com/icici-bank-internship-program-for-freshers-in-2025/'
     },
     {
       id: 3,
-      title: 'Work From Home Opportunities in IT Sector',
-      excerpt: 'Explore remote job opportunities in software development, digital marketing...',
+      title: 'Sutherland Hiring Freshers in 2025',
+      excerpt: 'Sutherland is actively hiring fresh graduates for various positions...',
       date: '3 days ago',
-      category: 'Remote Jobs',
-      readTime: '6 min read'
+      category: 'Private Jobs',
+      readTime: '6 min read',
+      url: 'https://trendingjobsindia.com/sutherland-hiring-freshers-in-2025/'
     }
   ];
 
@@ -74,11 +77,11 @@ const Index = () => {
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6">
               <a href="https://trendingjobsindia.com/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Home</a>
-              <a href="https://trendingjobsindia.com/work-from-home" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Work From Home</a>
-              <a href="https://trendingjobsindia.com/state-government" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">State Government</a>
-              <a href="https://trendingjobsindia.com/central-government" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Central Government</a>
-              <a href="https://trendingjobsindia.com/bank-jobs" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Bank Jobs</a>
-              <a href="https://trendingjobsindia.com/contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact Us</a>
+              <a href="https://trendingjobsindia.com/category/work-from-home-jobs/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Work From Home</a>
+              <a href="https://trendingjobsindia.com/category/state-government-jobs/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">State Government</a>
+              <a href="https://trendingjobsindia.com/category/central-government-jobs/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Central Government</a>
+              <a href="https://trendingjobsindia.com/category/bank-jobs/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Bank Jobs</a>
+              <a href="https://trendingjobsindia.com/contact-us/" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact Us</a>
             </nav>
             
             {/* Mobile Menu Button */}
@@ -92,19 +95,19 @@ const Index = () => {
             
             {/* Social Media Links */}
             <div className="hidden md:flex items-center space-x-3">
-              <a href="https://trendingjobsindia.com/contact" className="text-gray-600 hover:text-blue-500 transition-colors">
+              <a href="https://trendingjobsindia.com/contact-us/" className="text-gray-600 hover:text-blue-500 transition-colors">
                 <MessageCircle className="h-4 w-4 md:h-5 md:w-5" />
               </a>
-              <a href="https://trendingjobsindia.com/contact" className="text-gray-600 hover:text-green-500 transition-colors">
+              <a href="https://trendingjobsindia.com/contact-us/" className="text-gray-600 hover:text-green-500 transition-colors">
                 <Phone className="h-4 w-4 md:h-5 md:w-5" />
               </a>
-              <a href="https://trendingjobsindia.com/social/instagram" className="text-gray-600 hover:text-pink-500 transition-colors">
+              <a href="https://trendingjobsindia.com/" className="text-gray-600 hover:text-pink-500 transition-colors">
                 <Instagram className="h-4 w-4 md:h-5 md:w-5" />
               </a>
-              <a href="https://trendingjobsindia.com/social/facebook" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="https://trendingjobsindia.com/" className="text-gray-600 hover:text-blue-600 transition-colors">
                 <Facebook className="h-4 w-4 md:h-5 md:w-5" />
               </a>
-              <a href="https://trendingjobsindia.com/social/youtube" className="text-gray-600 hover:text-red-500 transition-colors">
+              <a href="https://trendingjobsindia.com/" className="text-gray-600 hover:text-red-500 transition-colors">
                 <Youtube className="h-4 w-4 md:h-5 md:w-5" />
               </a>
             </div>
@@ -114,11 +117,11 @@ const Index = () => {
           <nav className="lg:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-wrap gap-2">
               <a href="https://trendingjobsindia.com/" className="text-sm px-3 py-2 bg-blue-50 text-blue-600 rounded-lg font-medium">Home</a>
-              <a href="https://trendingjobsindia.com/work-from-home" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Work From Home</a>
-              <a href="https://trendingjobsindia.com/state-government" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">State Govt</a>
-              <a href="https://trendingjobsindia.com/central-government" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Central Govt</a>
-              <a href="https://trendingjobsindia.com/bank-jobs" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Bank Jobs</a>
-              <a href="https://trendingjobsindia.com/contact" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Contact Us</a>
+              <a href="https://trendingjobsindia.com/category/work-from-home-jobs/" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Work From Home</a>
+              <a href="https://trendingjobsindia.com/category/state-government-jobs/" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">State Govt</a>
+              <a href="https://trendingjobsindia.com/category/central-government-jobs/" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Central Govt</a>
+              <a href="https://trendingjobsindia.com/category/bank-jobs/" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Bank Jobs</a>
+              <a href="https://trendingjobsindia.com/contact-us/" className="text-sm px-3 py-2 hover:bg-gray-100 rounded-lg">Contact Us</a>
             </div>
           </nav>
         </div>
@@ -191,7 +194,7 @@ const Index = () => {
       <div className="text-center mb-8">
         <Button 
           size="lg" 
-          onClick={() => window.open('https://trendingjobsindia.com/jobs', '_blank')}
+          onClick={() => window.open('https://trendingjobsindia.com/', '_blank')}
           className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white px-8 py-3 text-lg"
         >
           Browse All Jobs on TrendingJobsIndia.com
@@ -207,7 +210,7 @@ const Index = () => {
       {/* Ad Placement 2 */}
       <AdPlaceholder type="square" className="my-6 md:my-8" />
 
-      {/* Latest Articles Section - Moved before Success Stories */}
+      {/* Latest Job Updates Section - Updated with specific job links */}
       <section className="py-12 md:py-16 px-4 bg-white">
         <div className="container mx-auto">
           <div className="text-center mb-8 md:mb-12">
@@ -216,20 +219,20 @@ const Index = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {featuredArticles.map((article) => (
-              <Card key={article.id} className="hover:shadow-xl transition-all duration-300 cursor-pointer group" onClick={() => handleArticleClick(article.id)}>
+            {featuredJobs.map((job) => (
+              <Card key={job.id} className="hover:shadow-xl transition-all duration-300 cursor-pointer group" onClick={() => handleArticleClick(job.url)}>
                 <CardContent className="p-4 md:p-6">
-                  <Badge className="mb-3 bg-blue-100 text-blue-600 text-xs md:text-sm">{article.category}</Badge>
+                  <Badge className="mb-3 bg-blue-100 text-blue-600 text-xs md:text-sm">{job.category}</Badge>
                   <h4 className="font-bold text-base md:text-lg mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
-                    {article.title}
+                    {job.title}
                   </h4>
-                  <p className="text-sm md:text-base text-gray-600 mb-4 line-clamp-3">{article.excerpt}</p>
+                  <p className="text-sm md:text-base text-gray-600 mb-4 line-clamp-3">{job.excerpt}</p>
                   <div className="flex items-center justify-between text-xs md:text-sm text-gray-500">
                     <span className="flex items-center">
                       <Clock className="h-3 w-3 md:h-4 md:w-4 mr-1" />
-                      {article.readTime}
+                      {job.readTime}
                     </span>
-                    <span>{article.date}</span>
+                    <span>{job.date}</span>
                   </div>
                 </CardContent>
               </Card>
@@ -240,10 +243,10 @@ const Index = () => {
             <Button 
               size="lg" 
               variant="outline" 
-              onClick={() => window.open('https://trendingjobsindia.com/articles', '_blank')}
+              onClick={() => window.open('https://trendingjobsindia.com/', '_blank')}
               className="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
             >
-              View All Articles
+              View All Jobs
             </Button>
           </div>
         </div>
@@ -299,19 +302,19 @@ const Index = () => {
               </p>
               {/* Social Media in Footer */}
               <div className="flex justify-center md:justify-start space-x-4">
-                <a href="https://trendingjobsindia.com/contact" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://trendingjobsindia.com/contact-us/" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <MessageCircle className="h-5 w-5" />
                 </a>
-                <a href="https://trendingjobsindia.com/contact" className="text-gray-400 hover:text-green-400 transition-colors">
+                <a href="https://trendingjobsindia.com/contact-us/" className="text-gray-400 hover:text-green-400 transition-colors">
                   <Phone className="h-5 w-5" />
                 </a>
-                <a href="https://trendingjobsindia.com/social/instagram" className="text-gray-400 hover:text-pink-400 transition-colors">
+                <a href="https://trendingjobsindia.com/" className="text-gray-400 hover:text-pink-400 transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="https://trendingjobsindia.com/social/facebook" className="text-gray-400 hover:text-blue-400 transition-colors">
+                <a href="https://trendingjobsindia.com/" className="text-gray-400 hover:text-blue-400 transition-colors">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://trendingjobsindia.com/social/youtube" className="text-gray-400 hover:text-red-400 transition-colors">
+                <a href="https://trendingjobsindia.com/" className="text-gray-400 hover:text-red-400 transition-colors">
                   <Youtube className="h-5 w-5" />
                 </a>
               </div>
@@ -319,19 +322,19 @@ const Index = () => {
             <div className="text-center md:text-left">
               <h4 className="font-semibold mb-4 text-base md:text-lg">Job Categories</h4>
               <ul className="space-y-2 text-gray-400 text-sm md:text-base">
-                <li><a href="https://trendingjobsindia.com/government-jobs" className="hover:text-white transition-colors">Government Jobs</a></li>
-                <li><a href="https://trendingjobsindia.com/bank-jobs" className="hover:text-white transition-colors">Bank Jobs</a></li>
-                <li><a href="https://trendingjobsindia.com/work-from-home" className="hover:text-white transition-colors">Work From Home</a></li>
-                <li><a href="https://trendingjobsindia.com/private-jobs" className="hover:text-white transition-colors">Private Jobs</a></li>
+                <li><a href="https://trendingjobsindia.com/category/state-government-jobs/" className="hover:text-white transition-colors">Government Jobs</a></li>
+                <li><a href="https://trendingjobsindia.com/category/bank-jobs/" className="hover:text-white transition-colors">Bank Jobs</a></li>
+                <li><a href="https://trendingjobsindia.com/category/work-from-home-jobs/" className="hover:text-white transition-colors">Work From Home</a></li>
+                <li><a href="https://trendingjobsindia.com/" className="hover:text-white transition-colors">Private Jobs</a></li>
               </ul>
             </div>
             <div className="text-center md:text-left">
               <h4 className="font-semibold mb-4 text-base md:text-lg">Quick Links</h4>
               <ul className="space-y-2 text-gray-400 text-sm md:text-base">
-                <li><a href="https://trendingjobsindia.com/latest-jobs" className="hover:text-white transition-colors">Latest Jobs</a></li>
-                <li><a href="https://trendingjobsindia.com/job-alerts" className="hover:text-white transition-colors">Job Alerts</a></li>
-                <li><a href="https://trendingjobsindia.com/career-tips" className="hover:text-white transition-colors">Career Tips</a></li>
-                <li><a href="https://trendingjobsindia.com/success-stories" className="hover:text-white transition-colors">Success Stories</a></li>
+                <li><a href="https://trendingjobsindia.com/" className="hover:text-white transition-colors">Latest Jobs</a></li>
+                <li><a href="https://trendingjobsindia.com/" className="hover:text-white transition-colors">Job Alerts</a></li>
+                <li><a href="https://trendingjobsindia.com/" className="hover:text-white transition-colors">Career Tips</a></li>
+                <li><a href="https://trendingjobsindia.com/" className="hover:text-white transition-colors">Success Stories</a></li>
               </ul>
             </div>
             <div className="text-center md:text-left">
@@ -340,7 +343,7 @@ const Index = () => {
                 <li>Email: info@trendingjobsindia.com</li>
                 <li>Phone: +91 9876543210</li>
                 <li>Address: Chennai, Tamil Nadu</li>
-                <li><a href="https://trendingjobsindia.com/contact" className="hover:text-white transition-colors">Contact Form</a></li>
+                <li><a href="https://trendingjobsindia.com/contact-us/" className="hover:text-white transition-colors">Contact Form</a></li>
               </ul>
             </div>
           </div>

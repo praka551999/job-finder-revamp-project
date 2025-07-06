@@ -15,6 +15,10 @@ const DistrictButtons = () => {
     'Vellore', 'Viluppuram', 'Virudhunagar'
   ];
 
+  const handleDistrictClick = () => {
+    window.open('https://trendingjobsindia.com/', '_blank');
+  };
+
   return (
     <section className="py-16 px-4 bg-white">
       <div className="container mx-auto">
@@ -34,6 +38,7 @@ const DistrictButtons = () => {
                   key={district}
                   variant="outline"
                   className="h-12 text-sm font-medium hover:bg-blue-50 hover:border-blue-500 hover:text-blue-600 transition-all duration-200"
+                  onClick={handleDistrictClick}
                 >
                   {district}
                 </Button>

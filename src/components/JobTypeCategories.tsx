@@ -12,7 +12,7 @@ const JobTypeCategories = () => {
       count: '5,234',
       color: 'bg-gradient-to-br from-green-500 to-green-600',
       hoverColor: 'hover:from-green-600 hover:to-green-700',
-      url: 'https://trendingjobsindia.com/work-from-home'
+      url: 'https://trendingjobsindia.com/category/work-from-home-jobs/'
     },
     {
       name: 'State Government Jobs',
@@ -20,7 +20,7 @@ const JobTypeCategories = () => {
       count: '2,567',
       color: 'bg-gradient-to-br from-blue-500 to-blue-600',
       hoverColor: 'hover:from-blue-600 hover:to-blue-700',
-      url: 'https://trendingjobsindia.com/state-government'
+      url: 'https://trendingjobsindia.com/category/state-government-jobs/'
     },
     {
       name: 'Central Government Jobs',
@@ -28,7 +28,7 @@ const JobTypeCategories = () => {
       count: '1,890',
       color: 'bg-gradient-to-br from-purple-500 to-purple-600',
       hoverColor: 'hover:from-purple-600 hover:to-purple-700',
-      url: 'https://trendingjobsindia.com/central-government'
+      url: 'https://trendingjobsindia.com/category/central-government-jobs/'
     },
     {
       name: 'Bank Jobs',
@@ -36,7 +36,7 @@ const JobTypeCategories = () => {
       count: '3,456',
       color: 'bg-gradient-to-br from-orange-500 to-orange-600',
       hoverColor: 'hover:from-orange-600 hover:to-orange-700',
-      url: 'https://trendingjobsindia.com/bank-jobs'
+      url: 'https://trendingjobsindia.com/category/bank-jobs/'
     },
     {
       name: 'Free Internships',
@@ -44,7 +44,7 @@ const JobTypeCategories = () => {
       count: '4,123',
       color: 'bg-gradient-to-br from-pink-500 to-pink-600',
       hoverColor: 'hover:from-pink-600 hover:to-pink-700',
-      url: 'https://trendingjobsindia.com/internships'
+      url: 'https://trendingjobsindia.com/category/internships/'
     },
     {
       name: 'Your Districts Job',
@@ -52,7 +52,7 @@ const JobTypeCategories = () => {
       count: '8,765',
       color: 'bg-gradient-to-br from-indigo-500 to-indigo-600',
       hoverColor: 'hover:from-indigo-600 hover:to-indigo-700',
-      url: 'https://trendingjobsindia.com/districts'
+      url: 'https://trendingjobsindia.com/'
     },
     {
       name: 'Private Jobs',
@@ -60,7 +60,7 @@ const JobTypeCategories = () => {
       count: '12,345',
       color: 'bg-gradient-to-br from-red-500 to-red-600',
       hoverColor: 'hover:from-red-600 hover:to-red-700',
-      url: 'https://trendingjobsindia.com/private-jobs'
+      url: 'https://trendingjobsindia.com/'
     },
     {
       name: 'Work From Office Jobs',
@@ -68,7 +68,7 @@ const JobTypeCategories = () => {
       count: '9,876',
       color: 'bg-gradient-to-br from-teal-500 to-teal-600',
       hoverColor: 'hover:from-teal-600 hover:to-teal-700',
-      url: 'https://trendingjobsindia.com/work-from-office'
+      url: 'https://trendingjobsindia.com/'
     }
   ];
 
